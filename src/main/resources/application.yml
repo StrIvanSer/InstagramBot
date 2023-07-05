@@ -1,0 +1,13 @@
+# Сервер
+server:
+  port: 8080
+
+# ACCEPT_FLOAT_AS_INT: false https://api.telegram.org/bot6049379033:AAFeUxt4_Zc4vmB3LmeStc8_p2m_6L3KOK8/setWebhook?url=https://a027-5-141-81-125.ngrok-free.app
+telegrambot:
+  webhookPath: "https://a027-5-141-81-125.ngrok-free.app"
+  botName: "@To_Instagram_Viewer_Bot"
+  botToken: "6049379033:AAFeUxt4_Zc4vmB3LmeStc8_p2m_6L3KOK8"
+# Приложение
+generator:
+  default:
+    enable: "false"
