@@ -9,6 +9,6 @@ public class MessageHello implements MessageGenerator {
 
     @Override
     public String generateMessage() {
-        return "привет";
+        return "Привет, Сёма и Ваня ))))";
     }
 }

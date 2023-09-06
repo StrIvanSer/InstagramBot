@@ -1,0 +1,41 @@
+syntax = "proto3";
+option java_multiple_files = true;
+package br.com.rformagio.grpc.server.grpcserver;
+
+message AddressRequest {
+  string cep = 1;
+}
+
+message AddressResponse {
+  string cep = 1;
+  string cidade = 2;
+}
+
+service CepService {
+  rpc getAddress(AddressRequest) returns (AddressResponse);
+}
+
+enum Category {
+  ELECTRONICS = 0;
+  EBOOKS = 1;
+}
+
+enum Status {
+  PAYMENT_RECEIVED = 0;
+  SHIPPED = 1;
+  OUT_FOR_DELIVERY = 2;
+  DELIVERED = 3;
+}
+
+message OrderRequest {
+  Category orderCategory = 1;
+}
+
+message OrderResponse {
+  Status orderStatus = 1;
+}
+
+service ECommerceService {
+  // server stream
+  rpc placeOrder(OrderRequest) returns (stream OrderResponse);
+}
